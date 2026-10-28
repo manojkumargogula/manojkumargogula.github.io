@@ -289,6 +289,18 @@ h1 em { display: inline-block; }
 .stickers.is-draggable li { cursor: grab; touch-action: none; }
 .stickers.is-draggable li:active { cursor: grabbing; }
 
+/* why me */
+.promises { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.promise { position: relative; background: var(--white); border: var(--line); border-radius: 18px; box-shadow: var(--pop); padding: 30px 22px 22px; }
+.promise h3 { font: 26px/1.1 var(--display); margin: 0 0 10px; }
+.promise p { margin: 0; font-size: 17px; }
+.promise-no { position: absolute; top: -18px; left: 18px; width: 38px; height: 38px; display: grid; place-items: center; border: var(--line); border-radius: 50%; background: var(--sun); font: 20px var(--display); }
+.promise:nth-child(3n+2) .promise-no { background: var(--mint); }
+.promise:nth-child(3n) .promise-no { background: var(--red); color: var(--white); }
+.why-foot { margin: 28px 0 0; font: 500 15px var(--mono); }
+@media (max-width: 1000px) { .promises { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 640px) { .promises { grid-template-columns: 1fr; gap: 28px; } }
+
 @media (max-width: 1000px) {
   .steps { grid-template-columns: repeat(2, 1fr); }
   .hero { grid-template-columns: 1fr; }
