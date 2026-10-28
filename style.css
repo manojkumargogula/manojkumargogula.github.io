@@ -337,3 +337,30 @@ h1 em { display: inline-block; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* why me: motion */
+.promise { transition: transform .25s cubic-bezier(.3,1.6,.5,1), box-shadow .25s ease; }
+.promise:hover { transform: translate(-4px, -6px) rotate(-1deg); box-shadow: 10px 12px 0 var(--ink); }
+.promise:nth-child(even):hover { transform: translate(-4px, -6px) rotate(1deg); }
+.promise:hover .promise-no { animation: boing .5s ease; }
+.promises.anim .promise { opacity: 0; transform: translateY(46px) rotate(-3deg) scale(.94); }
+.promises.anim .promise:nth-child(even) { transform: translateY(46px) rotate(3deg) scale(.94); }
+.promises.anim .promise-no { transform: scale(0); }
+.promises.anim.in-view .promise {
+  opacity: 1; transform: none;
+  transition: opacity .5s ease, transform .6s cubic-bezier(.3,1.6,.5,1);
+  transition-delay: calc(var(--i) * 110ms);
+}
+.promises.anim.in-view .promise-no {
+  transform: scale(1);
+  transition: transform .45s cubic-bezier(.3,1.9,.5,1);
+  transition-delay: calc(var(--i) * 110ms + 300ms);
+}
+.promises.anim.in-view .promise:hover { transform: translate(-4px, -6px) rotate(-1deg); transition-delay: 0s; }
+.why-foot { opacity: 1; }
+.promises.anim ~ .why-foot { opacity: 0; transition: opacity .6s ease 900ms; }
+.promises.anim.in-view ~ .why-foot { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .promises.anim .promise, .promises.anim .promise-no, .promises.anim ~ .why-foot { opacity: 1; transform: none; transition: none; }
+  .promise:hover, .promise:hover .promise-no { transform: none; animation: none; }
+}
