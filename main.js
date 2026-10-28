@@ -192,3 +192,18 @@
   gsap.fromTo(".beam", { rotation: -14 }, { rotation: 14, svgOrigin: "110 86", duration: 2.6, yoyo: true, repeat: -1, ease: "sine.inOut" });
   pop(".lighthouse", { y: 80, opacity: 0, duration: .8, ease: "back.out(1.6)" }, ".contact");
 })();
+
+// why me: cards pop in one by one when the section scrolls into view
+(function () {
+  var list = document.querySelector(".promises");
+  if (!list || !("IntersectionObserver" in window)) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  list.querySelectorAll(".promise").forEach(function (card, i) { card.style.setProperty("--i", i); });
+  list.classList.add("anim");
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { list.classList.add("in-view"); io.disconnect(); }
+    });
+  }, { threshold: 0.2 });
+  io.observe(list);
+})();
