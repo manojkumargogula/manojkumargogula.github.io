@@ -283,7 +283,7 @@
 <section class="section" id="log">
   <div class="section-head">
     <h2 class="bubble bubble-left">Captain's log</h2>
-    <p>Where I've worked, newest first.</p>
+    <p>Products I've built and shipped, newest first.</p>
   </div>
   <div class="log-wrap">
   <svg class="log-boat" viewBox="0 0 48 40" aria-hidden="true"><path d="M24 4v20" stroke="#14213D" stroke-width="3"/><path d="M25 5l13 15h-13z" fill="#FFC933" stroke="#14213D" stroke-width="3" stroke-linejoin="round"/><path d="M4 24h40l-7 12h-26z" fill="#FF5A47" stroke="#14213D" stroke-width="3" stroke-linejoin="round"/></svg>
@@ -292,37 +292,34 @@
       <p class="log-date">May 2023 → now</p>
       <div class="log-card">
         <h3>Founding Engineer <span>at Wexa AI, Hyderabad · product and platform</span></h3>
-        <p class="log-sub">Products I built</p>
+        <p class="log-sub">Products I built and shipped</p>
         <ul>
-          <li>Built Coconut.you end to end: a Next.js app that gives AI agents shared long term memory, its MCP server with OAuth sign in, a creator marketplace on Stripe Connect, and a CLI on npm.</li>
-          <li>Built CognoDB Cloud from zero: the customer console, the control plane, a public provisioning API and per database MCP connections with sharing by email. It ran up to 30K instances across every pricing tier.</li>
+          <li><strong>Coconut.you:</strong> took it from a first prototype (Memoizr) to a live product. Long term memory for AI agents, organised into one "coconut" per subject, that you can share with a friend.</li>
+          <li>Built the Next.js web app, the MCP server with OAuth sign in so Claude, ChatGPT and other agents can connect, and the knowledge graph pipeline behind recall.</li>
+          <li>Launched Coconut Hub, a marketplace where creators sell coconuts, with payouts on Stripe Connect, and an importer CLI on npm that brings in notes and code.</li>
+          <li>Submitted the MCP connector to the Claude connector directory.</li>
+          <li><strong>CognoDB Cloud:</strong> built the product from zero. Customer console, control plane, a public provisioning API, database user management, and per database MCP links you can share by email.</li>
+          <li>It ran up to 30K databases across every pricing tier. I also built an internal pricing calculator for the plans.</li>
           <li>Tuned the CognoDB engine in Go: cold open from 55 ms to 1 ms and transaction commit from 20 ms to 17 µs. In a head to head benchmark it ingested 19x faster than AWS Neptune.</li>
-          <li>Designed the service architecture for Klot.ai and Wexa Fabric and shipped Fabric as an on premise product for clients.</li>
+          <li><strong>Klot.ai and Wexa Fabric:</strong> designed the service architecture and shipped Fabric as an on premise product for clients.</li>
         </ul>
         <p class="log-sub">Platforms I run</p>
         <ul>
           <li>Run the cloud behind 1B+ agent runs a month at 10K concurrent agents, across AWS, Azure, GCP and Hetzner.</li>
-          <li>Serve LLMs from Amazon Bedrock, Azure OpenAI, Vertex AI and SageMaker through one gateway.</li>
-          <li>Led the SOC 2 Type II certification and owned the infrastructure controls.</li>
-          <li>Built CI/CD with GitHub Actions and Argo CD, with a fresh QA environment for every branch.</li>
+          <li>Run one LLM gateway in front of Bedrock, Azure OpenAI, Vertex AI and SageMaker, with automatic model routing.</li>
+          <li>Led the SOC 2 Type II certification, and set up CI/CD with a fresh QA environment for every branch.</li>
         </ul>
       </div>
     </li>
     <li class="log-entry">
       <p class="log-date">Jun 2022 → Apr 2023</p>
       <div class="log-card">
-        <h3>Software Engineer Trainee <span>at Revidd, Vizag</span></h3>
+        <h3>Software Engineer <span>at Revidd, Vizag · product frontend</span></h3>
         <ul>
-          <li>Built the Next.js frontend for a video on demand platform with REST and GraphQL APIs.</li>
-          <li>Owned the Spaces admin dashboard for sign ups and analytics.</li>
-          <li>Built the chat UI for Mindsome AI.</li>
+          <li><strong>Spaces:</strong> built the customer facing Next.js app for this video on demand platform, on REST and GraphQL APIs.</li>
+          <li>Owned the Spaces admin dashboard the team used to track sign ups and analytics.</li>
+          <li><strong>Mindsome AI:</strong> built the chat interface for the product.</li>
         </ul>
-      </div>
-    </li>
-    <li class="log-entry">
-      <p class="log-date">2019 → 2023</p>
-      <div class="log-card">
-        <h3>B.Tech, Electrical and Electronics <span>at GMR Institute of Technology, Rajam</span></h3>
       </div>
     </li>
   </ol>
