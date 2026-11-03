@@ -192,6 +192,7 @@ h1 em {
 .project-feature h3 { font-size: 38px; }
 .project-feature p { font-size: 18px; max-width: 46em; }
 .project-shots { background: #F4F0FF; }
+.project-cognodb { background: #E8FBFA; }
 .shots { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr .42fr; gap: 16px; align-items: center; margin-top: 6px; }
 .shots img { width: 100%; height: auto; display: block; border: var(--line); border-radius: 14px; box-shadow: 4px 4px 0 var(--ink); transition: transform .25s; }
 .shots img:nth-child(1) { transform: rotate(-1.2deg); }
